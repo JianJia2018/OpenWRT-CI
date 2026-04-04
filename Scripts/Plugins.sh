@@ -150,4 +150,5 @@ UPDATE_VERSION() {
 # UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
+UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
 
