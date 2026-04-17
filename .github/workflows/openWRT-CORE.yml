@@ -189,12 +189,6 @@ jobs:
 
           make defconfig
 
-      - name: Cleanup Toolchain
-        run: |
-          cd ./openwrt
-
-          make dirclean
-
       - name: Download Packages
         run: |
           cd ./openwrt
