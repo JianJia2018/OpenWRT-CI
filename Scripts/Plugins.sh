@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Design Theme
-git clone --depth=1 --single-branch --branch $(echo $openWRT_URL | grep -iq "lede" && echo "main" || echo "js") https://github.com/gngpp/luci-theme-design.git
-git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-config.git
+#Aurora Theme
+git clone --depth=1 --single-branch https://github.com/eamonxg/luci-theme-aurora.git
+git clone --depth=1 --single-branch https://github.com/eamonxg/luci-app-aurora-config.git
 #Argon Theme
 #git clone --depth=1 --single-branch --branch $(echo $openWRT_URL | grep -iq "lede" && echo "18.06" || echo "master") https://github.com/jerrykuku/luci-theme-argon.git
 #git clone --depth=1 --single-branch https://github.com/jerrykuku/luci-app-argon-config.git
@@ -139,8 +139,8 @@ UPDATE_VERSION() {
 
 
 
-#UPDATE_PACKAGE "design" "gngpp/luci-theme-design" "$([[ $WRT_URL == *"lede"* ]] && echo "main" || echo "js")"
-#UPDATE_PACKAGE "design-config" "gngpp/luci-app-design-config" "master"
+#UPDATE_PACKAGE "aurora" "eamonxg/luci-theme-aurora" "master"
+#UPDATE_PACKAGE "aurora-config" "eamonxg/luci-app-aurora-config" "master"
 
 # UPDATE_PACKAGE "passwall" "xiaorouji/openwrt-passwall" "main"
 # UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main"
@@ -150,4 +150,5 @@ UPDATE_VERSION() {
 UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscale-community" "master" "pkg"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
+UPDATE_PACKAGE "hostupdater" "GxxkX/hostupdater" "main"
 
