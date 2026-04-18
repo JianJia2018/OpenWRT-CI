@@ -26,7 +26,7 @@ if [[ $WRT_URL == *"lede"* ]]; then
   sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M 星期%w")/g' $LEDE_FILE
 fi
 
-sed -i 's:/bin/ash:/bin/bash:g' /etc/passwd
+sudo sed -i 's:/bin/ash:/bin/bash:g' /etc/passwd
 
 # sed -i "/helloworld/d" "feeds.conf.default"
 # echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
