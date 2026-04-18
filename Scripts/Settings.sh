@@ -28,4 +28,5 @@ fi
 
 sudo sed -i 's:/bin/ash:/bin/bash:g' /etc/passwd
 
+sed -i 's|;openwrt-25.12|;openwrt-24.10|' feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
