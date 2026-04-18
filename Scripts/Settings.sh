@@ -28,6 +28,5 @@ fi
 
 sudo sed -i 's:/bin/ash:/bin/bash:g' /etc/passwd
 
-sed -i '/src-git luci https:\/\/github.com\/coolsnowwolf\/luci\.git;openwrt-23.05/s/^/#/' "feeds.conf.default"
-echo "src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-24.10" >> "feeds.conf.default"
+sed -i 's|;openwrt-23.05|;openwrt-24.10|' "feeds.conf.default"
 ./scripts/feeds update -a && ./scripts/feeds install -a

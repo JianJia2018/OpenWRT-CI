@@ -102,6 +102,7 @@ jobs:
           sudo -E apt-get -qq autoremove --purge
           sudo -E apt-get -qq clean
           sudo -E timedatectl set-timezone "Asia/Shanghai"
+          pip3 install --upgrade cmake
 
       - name: Initialization Values
         run: |
