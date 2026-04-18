@@ -147,7 +147,10 @@ UPDATE_VERSION() {
 # UPDATE_PACKAGE "passwall-packages" "xiaorouji/openwrt-passwall-packages" "main"
 # UPDATE_PACKAGE "helloworld" "fw876/helloworld" "master"
 # UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev"
-UPDATE_PACKAGE "luci-app-tailscale-community" "Tokisaki-Galaxy/luci-app-tailscale-community" "master" "pkg"
+#luci-app-tailscale-community 仓库名与包目录名相同，不能用 UPDATE_PACKAGE 的 pkg 模式（会自删）
+git clone --depth=1 https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git /tmp/tailscale-community
+cp -rf /tmp/tailscale-community/luci-app-tailscale-community ./
+rm -rf /tmp/tailscale-community
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
 UPDATE_PACKAGE "hostupdater" "GxxkX/hostupdater" "main"
